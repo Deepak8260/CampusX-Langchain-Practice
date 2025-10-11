@@ -13,5 +13,5 @@ chat_template = ChatPromptTemplate([
 ])
 
 prompt = chat_template.invoke({'domain':'machine Learning' , 'topic':'Linear Regression'})
-
-print(prompt)
+result = model.invoke(prompt)
+print(result.content)
