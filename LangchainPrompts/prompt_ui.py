@@ -2,9 +2,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 import streamlit as st
 
-model = ChatGoogleGenerativeAI(model='gemini-2.5-flash')
 
 load_dotenv()
+
+model = ChatGoogleGenerativeAI(model='gemini-2.5-flash')
 
 st.header('Research Paper Summarizer')
 
