@@ -8,8 +8,8 @@ load_dotenv()
 model = ChatGoogleGenerativeAI(model='gemini-2.5-flash')
 
 chat_template = ChatPromptTemplate([
-    SystemMessage(content = "You are a helpful {domain} expert"),
-    HumanMessage(content = "Explain in easy to understadn words , what is {topic}")
+    ('system','You are a helpful {domain} expert'),
+    ('human','Explain in easy to understadn words , what is {topic}')
 ])
 
 prompt = chat_template.invoke({'domain':'machine Learning' , 'topic':'Linear Regression'})
